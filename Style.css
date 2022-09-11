@@ -3,8 +3,77 @@
     margin: 0px;
     font-family: monospace;
 }
-
+html{
+    font-size: 10px;
+}
 body{
     width: 100vw;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg ,black,rgba(0, 0, 0, 0.5));
+}
+.card{
+    width: 25rem;
+    height: 40rem;
+    position: relative;
+}
+.card .card-fornt{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background-color: navy;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transform: rotateY(0deg);
+    transition: 0.5s;
+}
+.card .card-fornt span{
+    font-size: 2rem;
+    color: white;
+}
+.card .card-fornt img{
+    width: 70%;
+    height: auto;
+}
+.card .card-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background-color: wheat;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    transform: rotateY(-180deg);
+    transition: 0.5s;
+}
+.card .card-back h2{
+    font-size: 2rem;
+    color: black;
+}
+.card .card-back p{
+    font-size: 1rem;
+    color: rgb(57, 57, 57);
+    padding:0px 2rem;
+    text-align: center;
+}
+.card:hover .card-fornt{
+    transform: rotateY(180deg);
+    z-index: 5;
+}
+.card:hover .card-back{
+    transform: rotateY(0deg);
+    z-index: 10;
 }
